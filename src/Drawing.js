@@ -17,7 +17,7 @@ export default class Drawing extends Component {
             >
                 <div className="Drawing-title">{this.props.drawing.name}</div>
                 <Canvas 
-                    drawingEnable={true} 
+                    drawingEnabled={true} 
                     onDraw={this.handleDraw}
                 />
             </div>
