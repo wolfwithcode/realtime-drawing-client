@@ -30,7 +30,10 @@ export default class Drawing extends Component {
             <div
                 className="Drawing"
             >
-                <div className="Drawing-title">{this.props.drawing.name}</div>
+                <div className="Drawing-title">
+                    {this.props.drawing.name}
+                    ({this.state.lines.length})
+                </div>
                 <Canvas 
                     drawingEnabled={true} 
                     onDraw={this.handleDraw}
