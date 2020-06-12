@@ -8,7 +8,7 @@ export default class DrawingList extends Component {
         console.log(" DrawingList ");
         super(props);
         subscribeToDrawings((drawing) => {
-            console.log(" subscribeToDrawings ", drawing)
+            console.log(" DrawingList subscribeToDrawings ", drawing)
             this.setState(prevState => ({
                 drawings: prevState.drawings.concat([drawing]),
             }));
@@ -24,6 +24,7 @@ export default class DrawingList extends Component {
             <li
                 className="DrawingList-item"
                 key={drawing.id}
+                onClick={event => this.props.selectDrawing(drawing)}
             >
                 {drawing.name}
             </li>
